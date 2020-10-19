@@ -15,11 +15,11 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore src/FreshMvvm/FreshMvvm.csproj 
+      run: dotnet restore FreshMvvm/src/FreshMvvm/FreshMvvm.csproj 
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish FreshMvvm.ashjit
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          PROJECT_FILE_PATH: src/FreshMvvm/FreshMvvm.csproj
+          PROJECT_FILE_PATH: FreshMvvm/src/FreshMvvm/FreshMvvm.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
