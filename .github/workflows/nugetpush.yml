@@ -23,3 +23,4 @@ jobs:
       with:
           PROJECT_FILE_PATH: src/FreshMvvm/FreshMvvm.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          NUGET_SOURCE: https://api.nuget.org
