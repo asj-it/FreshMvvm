@@ -2,27 +2,22 @@
 <package >
   <metadata>
     <id>FreshMvvm.asjit</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>FreshMvvm.asjit</title>
-    <authors>Ashlry Jackson</authors>
+    <authors>Ashley Jackson</authors>
     <owners>asjit</owners>
     <projectUrl>https://github.com/asj-it/FreshMvvm</projectUrl>
     <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="System.Reactive" version="4.0.0"/>
-      <dependency id="Xamarin.Forms" version="3.4.0.1009999"/>
+      <dependency id="Xamarin.Forms" version="4.8.0.1560"/>
     </dependencies>
     <description>This is a Fork From https://github.com/rid00z/FreshMvvm, which provides an updated version of the package as there has been no release since 2109.FreshMvvm is a super light Mvvm Framework designed specifically for Xamarin.Forms. Its designed to be Easy, Simple and Flexible.</description>    
     <tags>Mvvm, Xamarin.Forms, FreshMvvm</tags>
     <releaseNotes>
     1.0.0
-    Fork from the source at https://github.com/rid00z/FreshMvvm, update to the latest version of Xamarin forms.    
+    Fork from the source at https://github.com/rid00z/FreshMvvm, update to the latest version of Xamarin forms. 
+    </releaseNotes>
   </metadata>
-  <files>
-        <file src="bin/Release/netstandard2.0/FreshMvvm.dll" target="lib/netstandard2.0" />
-        <file src="bin/Release/netstandard2.0/FreshIOC.dll" target="lib/netstandard2.0" />
-        <file src="bin/Release/netstandard2.0/FreshMvvm.pdb" target="lib/netstandard2.0" />
-        <file src="bin/Release/netstandard2.0/FreshIOC.pdb" target="lib/netstandard2.0" />
-    </files>
 </package>
