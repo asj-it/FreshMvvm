@@ -1,30 +1,40 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>FreshMvvm</AssemblyName>
-    <RootNamespace>FreshMvvm</RootNamespace>
-    <AssemblyVersion>1.0.*</AssemblyVersion>
-    <Copyright>ASJ IT</Copyright>
-    <Deterministic>false</Deterministic>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
-    <Version>1.0.1</Version>
-    <PackageId>FreshMvvm.asjit</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
-    <Title>FreshMvvm Updated</Title>
-    <Authors>ASJ IT </Authors>
-    <PackageProjectUrl>https://github.com/asj-it/FreshMvvm</PackageProjectUrl>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="backup-2019-01-17-093112\**" />
-    <EmbeddedResource Remove="backup-2019-01-17-093112\**" />
-    <None Remove="backup-2019-01-17-093112\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Reactive" Version="4.0.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <ProjectReference Include="../FreshIOC/IOC.csproj" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>FreshMvvm</AssemblyName>
+        <RootNamespace>FreshMvvm</RootNamespace>
+        <AssemblyVersion>1.0.*</AssemblyVersion>
+        <Copyright>ASJ IT</Copyright>
+        <Deterministic>false</Deterministic>
+        <ReleaseVersion>1.0.2</ReleaseVersion>
+        <Version>1.0.2</Version>
+        <PackageId>FreshMvvm.asjit</PackageId>
+        <PackageVersion>1.0.2</PackageVersion>
+        <Title>FreshMvvm Updated</Title>
+        <Authors>ASJ IT</Authors>
+        <PackageProjectUrl>https://github.com/asj-it/FreshMvvm</PackageProjectUrl>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Remove="backup-2019-01-17-093112\**"/>
+        <EmbeddedResource Remove="backup-2019-01-17-093112\**"/>
+        <None Remove="backup-2019-01-17-093112\**"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Reactive" Version="4.0.0"/>
+        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../FreshIOC/IOC.csproj">
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+            <IncludeAssets>FreshIOC.dll</IncludeAssets>
+        </ProjectReference>
+    </ItemGroup>
+
+    <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+        <ItemGroup>
+            <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))"/>
+        </ItemGroup>
+    </Target>
 </Project>
