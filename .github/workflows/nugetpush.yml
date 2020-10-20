@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore src/FreshMvvm.sln 
     - name: Build
-      run: dotnet build --configuration Release --no-restore src/FreshMvvm/FreshMvvm.csproj 
+      run: dotnet build --configuration Release --no-restore src/FreshMvvm.sln
     - name: Publish FreshMvvm.ashjit
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
