@@ -13,7 +13,6 @@
         <Title>FreshMvvm Updated</Title>
         <Authors>ASJ IT</Authors>
         <PackageProjectUrl>https://github.com/asj-it/FreshMvvm</PackageProjectUrl>
-        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
     </PropertyGroup>
     <ItemGroup>
         <Compile Remove="backup-2019-01-17-093112\**"/>
@@ -31,10 +30,4 @@
             <IncludeAssets>FreshIOC.dll</IncludeAssets>
         </ProjectReference>
     </ItemGroup>
-
-    <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
-        <ItemGroup>
-            <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))"/>
-        </ItemGroup>
-    </Target>
 </Project>
