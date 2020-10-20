@@ -6,10 +6,10 @@
     <AssemblyVersion>1.0.*</AssemblyVersion>
     <Copyright>ASJ IT</Copyright>
     <Deterministic>false</Deterministic>
-    <ReleaseVersion>1.0.0</ReleaseVersion>
-    <Version>1.0.0</Version>
+    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <Version>1.0.1</Version>
     <PackageId>FreshMvvm.asjit</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Title>FreshMvvm Updated</Title>
     <Authors>ASJ IT </Authors>
     <PackageProjectUrl>https://github.com/asj-it/FreshMvvm</PackageProjectUrl>
